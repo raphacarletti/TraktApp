@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4040FFE21224A9300E70712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4040FFD21224A9300E70712 /* AppDelegate.swift */; };
+		E404100021224A9300E70712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4040FFF21224A9300E70712 /* ViewController.swift */; };
+		E404100321224A9300E70712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E404100121224A9300E70712 /* Main.storyboard */; };
+		E404100521224A9300E70712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E404100421224A9300E70712 /* Assets.xcassets */; };
+		E404100821224A9300E70712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E404100621224A9300E70712 /* LaunchScreen.storyboard */; };
+		E404101321224A9400E70712 /* TraktAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404101221224A9400E70712 /* TraktAppTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E404100F21224A9400E70712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4040FF221224A9300E70712 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4040FF921224A9300E70712;
+			remoteInfo = TraktApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E4040FFA21224A9300E70712 /* TraktApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4040FFD21224A9300E70712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E4040FFF21224A9300E70712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E404100221224A9300E70712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E404100421224A9300E70712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E404100721224A9300E70712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E404100921224A9300E70712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E404100E21224A9400E70712 /* TraktAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraktAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E404101221224A9400E70712 /* TraktAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktAppTests.swift; sourceTree = "<group>"; };
+		E404101421224A9400E70712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4040FF721224A9300E70712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E404100B21224A9400E70712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4040FF121224A9300E70712 = {
+			isa = PBXGroup;
+			children = (
+				E4040FFC21224A9300E70712 /* TraktApp */,
+				E404101121224A9400E70712 /* TraktAppTests */,
+				E4040FFB21224A9300E70712 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4040FFB21224A9300E70712 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4040FFA21224A9300E70712 /* TraktApp.app */,
+				E404100E21224A9400E70712 /* TraktAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4040FFC21224A9300E70712 /* TraktApp */ = {
+			isa = PBXGroup;
+			children = (
+				E4040FFD21224A9300E70712 /* AppDelegate.swift */,
+				E4040FFF21224A9300E70712 /* ViewController.swift */,
+				E404100121224A9300E70712 /* Main.storyboard */,
+				E404100421224A9300E70712 /* Assets.xcassets */,
+				E404100621224A9300E70712 /* LaunchScreen.storyboard */,
+				E404100921224A9300E70712 /* Info.plist */,
+			);
+			path = TraktApp;
+			sourceTree = "<group>";
+		};
+		E404101121224A9400E70712 /* TraktAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E404101221224A9400E70712 /* TraktAppTests.swift */,
+				E404101421224A9400E70712 /* Info.plist */,
+			);
+			path = TraktAppTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4040FF921224A9300E70712 /* TraktApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E404101721224A9400E70712 /* Build configuration list for PBXNativeTarget "TraktApp" */;
+			buildPhases = (
+				E4040FF621224A9300E70712 /* Sources */,
+				E4040FF721224A9300E70712 /* Frameworks */,
+				E4040FF821224A9300E70712 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TraktApp;
+			productName = TraktApp;
+			productReference = E4040FFA21224A9300E70712 /* TraktApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E404100D21224A9400E70712 /* TraktAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E404101A21224A9400E70712 /* Build configuration list for PBXNativeTarget "TraktAppTests" */;
+			buildPhases = (
+				E404100A21224A9400E70712 /* Sources */,
+				E404100B21224A9400E70712 /* Frameworks */,
+				E404100C21224A9400E70712 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E404101021224A9400E70712 /* PBXTargetDependency */,
+			);
+			name = TraktAppTests;
+			productName = TraktAppTests;
+			productReference = E404100E21224A9400E70712 /* TraktAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4040FF221224A9300E70712 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Raphael Carletti";
+				TargetAttributes = {
+					E4040FF921224A9300E70712 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E404100D21224A9400E70712 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = E4040FF921224A9300E70712;
+					};
+				};
+			};
+			buildConfigurationList = E4040FF521224A9300E70712 /* Build configuration list for PBXProject "TraktApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4040FF121224A9300E70712;
+			productRefGroup = E4040FFB21224A9300E70712 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4040FF921224A9300E70712 /* TraktApp */,
+				E404100D21224A9400E70712 /* TraktAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4040FF821224A9300E70712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E404100821224A9300E70712 /* LaunchScreen.storyboard in Resources */,
+				E404100521224A9300E70712 /* Assets.xcassets in Resources */,
+				E404100321224A9300E70712 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E404100C21224A9400E70712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4040FF621224A9300E70712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E404100021224A9300E70712 /* ViewController.swift in Sources */,
+				E4040FFE21224A9300E70712 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E404100A21224A9400E70712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E404101321224A9400E70712 /* TraktAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E404101021224A9400E70712 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4040FF921224A9300E70712 /* TraktApp */;
+			targetProxy = E404100F21224A9400E70712 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E404100121224A9300E70712 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E404100221224A9300E70712 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E404100621224A9300E70712 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E404100721224A9300E70712 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E404101521224A9400E70712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E404101621224A9400E70712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E404101821224A9400E70712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraktApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaelcarletti.TraktApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E404101921224A9400E70712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraktApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaelcarletti.TraktApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E404101B21224A9400E70712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraktAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaelcarletti.TraktAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraktApp.app/TraktApp";
+			};
+			name = Debug;
+		};
+		E404101C21224A9400E70712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TraktAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.raphaelcarletti.TraktAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraktApp.app/TraktApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4040FF521224A9300E70712 /* Build configuration list for PBXProject "TraktApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E404101521224A9400E70712 /* Debug */,
+				E404101621224A9400E70712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E404101721224A9400E70712 /* Build configuration list for PBXNativeTarget "TraktApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E404101821224A9400E70712 /* Debug */,
+				E404101921224A9400E70712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E404101A21224A9400E70712 /* Build configuration list for PBXNativeTarget "TraktAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E404101B21224A9400E70712 /* Debug */,
+				E404101C21224A9400E70712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4040FF221224A9300E70712 /* Project object */;
+}
