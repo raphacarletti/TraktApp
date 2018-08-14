@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TraktApp
 //
-//  Created by Yasmin Benatti on 2018-08-13.
+//  Created by Raphael Carletti on 2018-08-13.
 //  Copyright © 2018 Raphael Carletti. All rights reserved.
 //
 

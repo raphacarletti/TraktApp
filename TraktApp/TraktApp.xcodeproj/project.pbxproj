@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA6339830D0AC124DF3300A9 /* Pods_TraktApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BF4D3F84EB5E45D2F65995 /* Pods_TraktApp.framework */; };
+		D3700BCBF1CD897CB08E5717 /* Pods_TraktAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2677DDDEAAD88953B252D9DC /* Pods_TraktAppTests.framework */; };
 		E4040FFE21224A9300E70712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4040FFD21224A9300E70712 /* AppDelegate.swift */; };
-		E404100021224A9300E70712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4040FFF21224A9300E70712 /* ViewController.swift */; };
+		E404100021224A9300E70712 /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4040FFF21224A9300E70712 /* ShowsViewController.swift */; };
 		E404100321224A9300E70712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E404100121224A9300E70712 /* Main.storyboard */; };
 		E404100521224A9300E70712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E404100421224A9300E70712 /* Assets.xcassets */; };
 		E404100821224A9300E70712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E404100621224A9300E70712 /* LaunchScreen.storyboard */; };
 		E404101321224A9400E70712 /* TraktAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404101221224A9400E70712 /* TraktAppTests.swift */; };
+		E404101F21224C6A00E70712 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404101E21224C6A00E70712 /* UIColorExtension.swift */; };
+		E404102421224F8C00E70712 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404102321224F8C00E70712 /* Constants.swift */; };
+		E404102721224FA500E70712 /* ShowsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404102621224FA500E70712 /* ShowsAPIService.swift */; };
+		E404102C21224FE100E70712 /* ShowsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404102A21224FE100E70712 /* ShowsCollectionViewCell.swift */; };
+		E404102D21224FE100E70712 /* ShowsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E404102B21224FE100E70712 /* ShowsCollectionViewCell.xib */; };
+		E40410302122559D00E70712 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404102F2122559D00E70712 /* Show.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05BF4D3F84EB5E45D2F65995 /* Pods_TraktApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraktApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		084AFD0CEBF2D5CC73E58DDA /* Pods-TraktAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2677DDDEAAD88953B252D9DC /* Pods_TraktAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraktAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED9726C387FFC8C164E8D40 /* Pods-TraktApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E4040FFA21224A9300E70712 /* TraktApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4040FFD21224A9300E70712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4040FFF21224A9300E70712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4040FFF21224A9300E70712 /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
 		E404100221224A9300E70712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E404100421224A9300E70712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E404100721224A9300E70712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +48,14 @@
 		E404100E21224A9400E70712 /* TraktAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraktAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E404101221224A9400E70712 /* TraktAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktAppTests.swift; sourceTree = "<group>"; };
 		E404101421224A9400E70712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E404101E21224C6A00E70712 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E404102321224F8C00E70712 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E404102621224FA500E70712 /* ShowsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsAPIService.swift; sourceTree = "<group>"; };
+		E404102A21224FE100E70712 /* ShowsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsCollectionViewCell.swift; sourceTree = "<group>"; };
+		E404102B21224FE100E70712 /* ShowsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowsCollectionViewCell.xib; sourceTree = "<group>"; };
+		E404102F2122559D00E70712 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		F64B87D3B430C2143FFADB11 /* Pods-TraktApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.release.xcconfig"; sourceTree = "<group>"; };
+		F75BF6A70D1DF968C0D48B9C /* Pods-TraktAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6339830D0AC124DF3300A9 /* Pods_TraktApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +71,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3700BCBF1CD897CB08E5717 /* Pods_TraktAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		268986C0F902FC0195F17382 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DED9726C387FFC8C164E8D40 /* Pods-TraktApp.debug.xcconfig */,
+				F64B87D3B430C2143FFADB11 /* Pods-TraktApp.release.xcconfig */,
+				F75BF6A70D1DF968C0D48B9C /* Pods-TraktAppTests.debug.xcconfig */,
+				084AFD0CEBF2D5CC73E58DDA /* Pods-TraktAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9260A31465B1EBA1FF2F04CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05BF4D3F84EB5E45D2F65995 /* Pods_TraktApp.framework */,
+				2677DDDEAAD88953B252D9DC /* Pods_TraktAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E4040FF121224A9300E70712 = {
 			isa = PBXGroup;
 			children = (
 				E4040FFC21224A9300E70712 /* TraktApp */,
 				E404101121224A9400E70712 /* TraktAppTests */,
 				E4040FFB21224A9300E70712 /* Products */,
+				268986C0F902FC0195F17382 /* Pods */,
+				9260A31465B1EBA1FF2F04CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +121,14 @@
 		E4040FFC21224A9300E70712 /* TraktApp */ = {
 			isa = PBXGroup;
 			children = (
+				E404102E2122558500E70712 /* Model */,
+				E404102821224FAE00E70712 /* UI */,
+				E404102521224F9800E70712 /* Service */,
+				E404102221224F7D00E70712 /* Constants */,
+				E404102121224F6F00E70712 /* Storyboard */,
+				E404102021224F6400E70712 /* Controller */,
+				E404101D21224C5B00E70712 /* Extension */,
 				E4040FFD21224A9300E70712 /* AppDelegate.swift */,
-				E4040FFF21224A9300E70712 /* ViewController.swift */,
-				E404100121224A9300E70712 /* Main.storyboard */,
 				E404100421224A9300E70712 /* Assets.xcassets */,
 				E404100621224A9300E70712 /* LaunchScreen.storyboard */,
 				E404100921224A9300E70712 /* Info.plist */,
@@ -96,6 +145,71 @@
 			path = TraktAppTests;
 			sourceTree = "<group>";
 		};
+		E404101D21224C5B00E70712 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E404101E21224C6A00E70712 /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E404102021224F6400E70712 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4040FFF21224A9300E70712 /* ShowsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E404102121224F6F00E70712 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E404100121224A9300E70712 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E404102221224F7D00E70712 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E404102321224F8C00E70712 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E404102521224F9800E70712 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E404102621224FA500E70712 /* ShowsAPIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E404102821224FAE00E70712 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E404102921224FB800E70712 /* ShowsCollectionViewCell */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E404102921224FB800E70712 /* ShowsCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E404102A21224FE100E70712 /* ShowsCollectionViewCell.swift */,
+				E404102B21224FE100E70712 /* ShowsCollectionViewCell.xib */,
+			);
+			path = ShowsCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E404102E2122558500E70712 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E404102F2122559D00E70712 /* Show.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E404101721224A9400E70712 /* Build configuration list for PBXNativeTarget "TraktApp" */;
 			buildPhases = (
+				82DBFBFA1B687D8EA23BC321 /* [CP] Check Pods Manifest.lock */,
 				E4040FF621224A9300E70712 /* Sources */,
 				E4040FF721224A9300E70712 /* Frameworks */,
 				E4040FF821224A9300E70712 /* Resources */,
+				C9EA6D0F58940A2067B47EC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E404101A21224A9400E70712 /* Build configuration list for PBXNativeTarget "TraktAppTests" */;
 			buildPhases = (
+				7D344C184D0DF5F05B332559 /* [CP] Check Pods Manifest.lock */,
 				E404100A21224A9400E70712 /* Sources */,
 				E404100B21224A9400E70712 /* Frameworks */,
 				E404100C21224A9400E70712 /* Resources */,
@@ -180,6 +297,7 @@
 				E404100821224A9300E70712 /* LaunchScreen.storyboard in Resources */,
 				E404100521224A9300E70712 /* Assets.xcassets in Resources */,
 				E404100321224A9300E70712 /* Main.storyboard in Resources */,
+				E404102D21224FE100E70712 /* ShowsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +310,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D344C184D0DF5F05B332559 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraktAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82DBFBFA1B687D8EA23BC321 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraktApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9EA6D0F58940A2067B47EC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E4040FF621224A9300E70712 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E404100021224A9300E70712 /* ViewController.swift in Sources */,
+				E404100021224A9300E70712 /* ShowsViewController.swift in Sources */,
+				E404102C21224FE100E70712 /* ShowsCollectionViewCell.swift in Sources */,
 				E4040FFE21224A9300E70712 /* AppDelegate.swift in Sources */,
+				E404101F21224C6A00E70712 /* UIColorExtension.swift in Sources */,
+				E40410302122559D00E70712 /* Show.swift in Sources */,
+				E404102721224FA500E70712 /* ShowsAPIService.swift in Sources */,
+				E404102421224F8C00E70712 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,10 +536,12 @@
 		};
 		E404101821224A9400E70712 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DED9726C387FFC8C164E8D40 /* Pods-TraktApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TraktApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,10 +555,12 @@
 		};
 		E404101921224A9400E70712 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64B87D3B430C2143FFADB11 /* Pods-TraktApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TraktApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,6 +574,7 @@
 		};
 		E404101B21224A9400E70712 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F75BF6A70D1DF968C0D48B9C /* Pods-TraktAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +595,7 @@
 		};
 		E404101C21224A9400E70712 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 084AFD0CEBF2D5CC73E58DDA /* Pods-TraktAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
