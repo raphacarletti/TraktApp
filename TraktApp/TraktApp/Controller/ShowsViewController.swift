@@ -9,7 +9,7 @@
 import UIKit
 
 class ShowsViewController: UIViewController {
-    @IBOutlet weak var showsCollectionView: UICollectionView! {
+    @IBOutlet private weak var showsCollectionView: UICollectionView! {
         didSet {
             self.showsCollectionView.dataSource = self
             self.showsCollectionView.delegate = self
@@ -19,22 +19,36 @@ class ShowsViewController: UIViewController {
         }
     }
     
-    var shows: [Show] = []
+    private var refresher = UIRefreshControl()
+    
+    private var shows: [Show] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.configNavBar()
-        ShowsAPIService.getSharedInstance().getPopularShows { (shows) in
-            if let shows = shows {
-                self.shows.append(contentsOf: shows)
-                self.showsCollectionView.reloadData()
-            }
-        }
+        self.configPullToRefresh()
+        self.getAllShows()
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func getAllShows(completion: (()->())? = nil) {
+        ShowsAPIService.getSharedInstance().getPopularShows { (shows) in
+            if let shows = shows {
+                self.shows.append(contentsOf: shows)
+                self.showsCollectionView.reloadData()
+            } else {
+                let alert = UIAlertController(title: AlertMessages.cantLoadShows , message: AlertMessages.cantLoadShowsSubtitle, preferredStyle: .alert)
+                let action = UIAlertAction(title: AlertMessages.ok, style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+            completion?()
+        }
     }
 
     func configNavBar() {
@@ -45,6 +59,20 @@ class ShowsViewController: UIViewController {
             self.navigationItem.largeTitleDisplayMode = .never
         }
         
+    }
+    
+    func configPullToRefresh() {
+        self.refresher.tintColor = UIColor.black
+        self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        self.showsCollectionView.alwaysBounceVertical = true
+        self.showsCollectionView.addSubview(refresher)
+    }
+    
+    @objc func loadData() {
+        self.shows = []
+        self.getAllShows {
+            self.refresher.endRefreshing()
+        }
     }
 
 }

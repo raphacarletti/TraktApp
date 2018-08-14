@@ -6,11 +6,14 @@
 //  Copyright © 2018 Raphael Carletti. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Show {
     let title: String
     let tmdbId: Int
+    var posterPath: String? = nil
+    var backdropPath: String? = nil
+    var image: UIImage? = nil
     
     init(title: String, tmdbId: Int) {
         self.title = title

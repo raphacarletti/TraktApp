@@ -21,6 +21,7 @@
 		E404102C21224FE100E70712 /* ShowsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404102A21224FE100E70712 /* ShowsCollectionViewCell.swift */; };
 		E404102D21224FE100E70712 /* ShowsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E404102B21224FE100E70712 /* ShowsCollectionViewCell.xib */; };
 		E40410302122559D00E70712 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404102F2122559D00E70712 /* Show.swift */; };
+		E41429CC2122D42B00E6B458 /* ImageAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41429CB2122D42B00E6B458 /* ImageAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E404102A21224FE100E70712 /* ShowsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E404102B21224FE100E70712 /* ShowsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowsCollectionViewCell.xib; sourceTree = "<group>"; };
 		E404102F2122559D00E70712 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		E41429CB2122D42B00E6B458 /* ImageAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIService.swift; sourceTree = "<group>"; };
 		F64B87D3B430C2143FFADB11 /* Pods-TraktApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.release.xcconfig"; sourceTree = "<group>"; };
 		F75BF6A70D1DF968C0D48B9C /* Pods-TraktAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				E404102621224FA500E70712 /* ShowsAPIService.swift */,
+				E41429CB2122D42B00E6B458 /* ImageAPIService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				E404101F21224C6A00E70712 /* UIColorExtension.swift in Sources */,
 				E40410302122559D00E70712 /* Show.swift in Sources */,
 				E404102721224FA500E70712 /* ShowsAPIService.swift in Sources */,
+				E41429CC2122D42B00E6B458 /* ImageAPIService.swift in Sources */,
 				E404102421224F8C00E70712 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

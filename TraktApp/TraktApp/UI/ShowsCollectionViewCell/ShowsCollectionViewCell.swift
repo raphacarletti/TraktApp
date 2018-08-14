@@ -26,6 +26,15 @@ class ShowsCollectionViewCell: UICollectionViewCell {
 
     func setUpCell(show: Show) {
         self.showNameLabel.text = show.title
-        self.posterImageView.image = ImageConstants.imagePlaceholder
+        if let image = show.image {
+            self.posterImageView.image = image
+        } else {
+            self.posterImageView.image = ImageConstants.imagePlaceholder
+            ShowsAPIService.getSharedInstance().getTMDBShow(show: show) { (success) in
+                ImageAPIService.getSharedInstance().getMovieImage(show: show, completion: { (image) in
+                    self.posterImageView.image = image
+                })
+            }
+        }
     }
 }
