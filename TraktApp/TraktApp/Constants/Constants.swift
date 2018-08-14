@@ -22,6 +22,7 @@ struct APIConstants {
     static let baseImageUrl: String = "https://image.tmdb.org/t/p/"
     static let posterMinimumWidth: String = "w92"
     static let backdropMinimumWidth: String = "w300"
+    static let limitPagination: Int = 10
 }
 
 struct APIShowKey {
@@ -32,6 +33,13 @@ struct APIShowKey {
 
 struct APIParameters {
     static let apiKey: String = "api_key"
+    static let page: String = "page"
+    static let limit: String = "limit"
+}
+
+struct APIHeaders {
+    static let apiKey: String = "trakt-api-key"
+    static let maxNumberOfPages = "x-pagination-page-count"
 }
 
 struct ImageConstants {

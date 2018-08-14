@@ -12,7 +12,9 @@ import Alamofire
 class ShowsAPIService {
     // MARK: - Variables
     private static var sharedInstance: ShowsAPIService? = nil
-    
+    private var maxNumberOfPages: Int = 0
+    private var actualPage: Int = 0
+    private var isLoading: Bool = false
     // MARK: - Initializations Methods
     private init() {}
     
@@ -27,31 +29,51 @@ class ShowsAPIService {
         return checkedSharedInstance
     }
     
+    func restartPopularShows() {
+        self.actualPage = 0
+    }
+    
     func getPopularShows(completion: @escaping (_ shows: [Show]?)->()) {
-        Alamofire.request("\(APIConstants.baseUrl)\(APIConstants.popularUrl)", method: .get).responseJSON { (response) in
-            guard let valueDict = response.value as? [[String: Any]] else {
+        isLoading = true
+        actualPage += 1
+        let parameters: [String: Any] = [APIParameters.page: actualPage, APIParameters.limit: APIConstants.limitPagination]
+        let headers: HTTPHeaders = [APIHeaders.apiKey: APIConstants.traktKey]
+        Alamofire.request("\(APIConstants.baseUrl)\(APIConstants.popularUrl)", parameters: parameters, headers: headers).responseJSON { (response) in
+            guard let valueDict = response.value as? [[String: Any]], let maxNumberOfPages = response.response?.allHeaderFields[APIHeaders.maxNumberOfPages] as? String else {
                 completion(nil)
                 return
             }
+            if let maxPages = Int(maxNumberOfPages) {
+                self.maxNumberOfPages = Int(maxPages)
+            }
             
             var shows: [Show] = []
+            let dispatchGroup = DispatchGroup()
             for show in valueDict {
                 if let show = Show.parse(dict: show) {
                     shows.append(show)
+                    dispatchGroup.enter()
                     ShowsAPIService.getSharedInstance().getTMDBShow(show: show) { (success) in
                         if success {
-                            ImageAPIService.getSharedInstance().getMovieImage(show: show)
+                            dispatchGroup.enter()
+                            ImageAPIService.getSharedInstance().getMovieImage(show: show, completion: {
+                                dispatchGroup.leave()
+                            })
                         }
+                        dispatchGroup.leave()
                     }
                 }
             }
             
-            completion(shows)
+            dispatchGroup.notify(queue: .main, execute: {
+                self.isLoading = false
+                completion(shows)
+            })
         }
     }
     
     
-    func getTMDBShow(show: Show, completion: @escaping (_ success: Bool)->()) {
+    private func getTMDBShow(show: Show, completion: @escaping (_ success: Bool)->()) {
         let parameters: [String: Any] = [APIParameters.apiKey: APIConstants.TMDBKey]
         Alamofire.request("\(APIConstants.baseTMDBUrl)\(APIConstants.tvRequestTMDB)\(show.tmdbId)", method: .get, parameters: parameters).responseJSON { (response) in
             guard let valueDict = response.value as? [String: Any] else {
@@ -70,6 +92,14 @@ class ShowsAPIService {
             completion(true)
         }
         
+    }
+    
+    func canLoadMore() -> Bool {
+        return !isLoading && maxNumberOfPages > actualPage
+    }
+    
+    func canPullToRefresh() -> Bool {
+        return !isLoading
     }
     
     

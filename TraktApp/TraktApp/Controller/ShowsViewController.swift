@@ -14,8 +14,8 @@ class ShowsViewController: UIViewController {
             self.showsCollectionView.dataSource = self
             self.showsCollectionView.delegate = self
             self.showsCollectionView.register(ShowsCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: ShowsCollectionViewCell.self))
-            
             self.showsCollectionView.register(UINib(nibName: String(describing: ShowsCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: ShowsCollectionViewCell.self))
+            
         }
     }
     
@@ -29,12 +29,6 @@ class ShowsViewController: UIViewController {
         self.configNavBar()
         self.configPullToRefresh()
         self.getAllShows()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(showImageFinishDownload(_:)), name: .ShowImageFinishDownload, object: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: .ShowImageFinishDownload, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,21 +68,14 @@ class ShowsViewController: UIViewController {
     }
     
     @objc func loadData() {
-        self.shows = []
-        self.getAllShows {
+        if ShowsAPIService.getSharedInstance().canPullToRefresh() {
+            self.shows = []
+            ShowsAPIService.getSharedInstance().restartPopularShows()
+            self.getAllShows {
+                self.refresher.endRefreshing()
+            }
+        } else {
             self.refresher.endRefreshing()
-        }
-    }
-    
-    @objc func showImageFinishDownload(_ notification: Notification) {
-        guard let userInfo = notification.userInfo, let tmdbId = userInfo[NotificationKeys.tmdbId] as? Int else {
-            return
-        }
-        
-        if let index = self.shows.index(where: { (show) -> Bool in
-            return tmdbId == show.tmdbId
-        }) {
-            self.showsCollectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
         }
     }
 
@@ -109,7 +96,6 @@ extension ShowsViewController: UICollectionViewDataSource {
         return UICollectionViewCell()
     }
     
-    
 }
 
 extension ShowsViewController: UICollectionViewDelegateFlowLayout {
@@ -119,6 +105,10 @@ extension ShowsViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension ShowsViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == (self.shows.count-1) && ShowsAPIService.getSharedInstance().canLoadMore() {
+            self.getAllShows()
+        }
+    }
 }
 

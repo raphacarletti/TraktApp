@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D6D5F2C2123000000A4DD85 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D5F2B2123000000A4DD85 /* NotificationExtension.swift */; };
 		BA6339830D0AC124DF3300A9 /* Pods_TraktApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BF4D3F84EB5E45D2F65995 /* Pods_TraktApp.framework */; };
 		D3700BCBF1CD897CB08E5717 /* Pods_TraktAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2677DDDEAAD88953B252D9DC /* Pods_TraktAppTests.framework */; };
 		E4040FFE21224A9300E70712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4040FFD21224A9300E70712 /* AppDelegate.swift */; };
@@ -39,7 +38,6 @@
 		05BF4D3F84EB5E45D2F65995 /* Pods_TraktApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraktApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		084AFD0CEBF2D5CC73E58DDA /* Pods-TraktAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraktAppTests/Pods-TraktAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		2677DDDEAAD88953B252D9DC /* Pods_TraktAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraktAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D6D5F2B2123000000A4DD85 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		DED9726C387FFC8C164E8D40 /* Pods-TraktApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraktApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraktApp/Pods-TraktApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E4040FFA21224A9300E70712 /* TraktApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4040FFD21224A9300E70712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				E404101E21224C6A00E70712 /* UIColorExtension.swift */,
-				6D6D5F2B2123000000A4DD85 /* NotificationExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -381,7 +378,6 @@
 				E404100021224A9300E70712 /* ShowsViewController.swift in Sources */,
 				E404102C21224FE100E70712 /* ShowsCollectionViewCell.swift in Sources */,
 				E4040FFE21224A9300E70712 /* AppDelegate.swift in Sources */,
-				6D6D5F2C2123000000A4DD85 /* NotificationExtension.swift in Sources */,
 				E404101F21224C6A00E70712 /* UIColorExtension.swift in Sources */,
 				E40410302122559D00E70712 /* Show.swift in Sources */,
 				E404102721224FA500E70712 /* ShowsAPIService.swift in Sources */,

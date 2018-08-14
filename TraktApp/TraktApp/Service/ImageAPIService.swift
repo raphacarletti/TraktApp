@@ -31,7 +31,7 @@ class ImageAPIService {
         return checkedSharedInstance
     }
     
-    func getMovieImage(show: Show) {
+    func getMovieImage(show: Show, completion: (()->())?) {
         if show.image == nil {
             let path: String?
             let type: ImageType
@@ -42,6 +42,7 @@ class ImageAPIService {
                 path = backdropPath
                 type = .Backdrop
             } else {
+                completion?()
                 return
             }
             if let path = path {
@@ -54,15 +55,26 @@ class ImageAPIService {
                         url = URL(string: "\(APIConstants.baseImageUrl)\(APIConstants.backdropMinimumWidth)\(path)")
                     }
                     if let url = url {
-                        guard let imageData = try? Data(contentsOf: url), let image = UIImage(data: imageData) else {
-                            return
-                        }
-                        show.image = image
-                        DispatchQueue.main.async {
-                            NotificationCenter.default.post(name: .ShowImageFinishDownload, object: nil, userInfo: [NotificationKeys.tmdbId: show.tmdbId])
-                        }
+                        let request = URLRequest(url: url)
+                        URLSession.shared.dataTask(with: request) { (data, response, error) in
+                            DispatchQueue.main.async {
+                                if let imageData = data, let image = UIImage(data: imageData) {
+                                    print("\(show.title)")
+                                    show.image = image
+                                } else if let error = error {
+                                    print("\(show.title) error: \(error.localizedDescription)")
+                                } else {
+                                    print("\(show.title) NAO SEIIIII")
+                                }
+                                completion?()
+                            }
+                        }.resume()
+                    } else {
+                        completion?()
                     }
                 }
+            } else {
+                completion?()
             }
         }
     }
