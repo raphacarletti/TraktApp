@@ -35,8 +35,12 @@ class ShowsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func getAllShows(completion: (()->())? = nil) {
+    func getAllShows(cleanAllShows: Bool = false, completion: (()->())? = nil) {
         ShowsAPIService.getSharedInstance().getPopularShows { (shows) in
+            if cleanAllShows {
+                self.shows = []
+            }
+            
             if let shows = shows {
                 self.shows.append(contentsOf: shows)
                 self.showsCollectionView.reloadData()
@@ -69,9 +73,8 @@ class ShowsViewController: UIViewController {
     
     @objc func loadData() {
         if ShowsAPIService.getSharedInstance().canPullToRefresh() {
-            self.shows = []
             ShowsAPIService.getSharedInstance().restartPopularShows()
-            self.getAllShows {
+            self.getAllShows(cleanAllShows: true) {
                 self.refresher.endRefreshing()
             }
         } else {

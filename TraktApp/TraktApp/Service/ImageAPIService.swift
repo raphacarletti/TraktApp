@@ -2,7 +2,7 @@
 //  ImageAPIService.swift
 //  TraktApp
 //
-//  Created by Yasmin Benatti on 2018-08-14.
+//  Created by Raphael Carletti on 2018-08-14.
 //  Copyright © 2018 Raphael Carletti. All rights reserved.
 //
 
