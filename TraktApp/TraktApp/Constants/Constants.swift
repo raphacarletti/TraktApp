@@ -48,3 +48,7 @@ struct AlertMessages {
     static let cantLoadShowsSubtitle = "I'm sorry :("
     static let ok = "Ok"
 }
+
+struct NotificationKeys {
+    static let tmdbId = "tmdbId"
+}

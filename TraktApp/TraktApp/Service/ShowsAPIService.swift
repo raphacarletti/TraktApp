@@ -38,6 +38,11 @@ class ShowsAPIService {
             for show in valueDict {
                 if let show = Show.parse(dict: show) {
                     shows.append(show)
+                    ShowsAPIService.getSharedInstance().getTMDBShow(show: show) { (success) in
+                        if success {
+                            ImageAPIService.getSharedInstance().getMovieImage(show: show)
+                        }
+                    }
                 }
             }
             

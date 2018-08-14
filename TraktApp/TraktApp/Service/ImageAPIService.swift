@@ -31,7 +31,7 @@ class ImageAPIService {
         return checkedSharedInstance
     }
     
-    func getMovieImage(show: Show, completion: @escaping (_ image: UIImage?)->()) {
+    func getMovieImage(show: Show) {
         if show.image == nil {
             let path: String?
             let type: ImageType
@@ -59,7 +59,7 @@ class ImageAPIService {
                         }
                         show.image = image
                         DispatchQueue.main.async {
-                            completion(image)
+                            NotificationCenter.default.post(name: .ShowImageFinishDownload, object: nil, userInfo: [NotificationKeys.tmdbId: show.tmdbId])
                         }
                     }
                 }

@@ -30,15 +30,6 @@ class ShowsCollectionViewCell: UICollectionViewCell {
             self.posterImageView.image = image
         } else {
             self.posterImageView.image = ImageConstants.imagePlaceholder
-            ShowsAPIService.getSharedInstance().getTMDBShow(show: show) { (success) in
-                if success {
-                    ImageAPIService.getSharedInstance().getMovieImage(show: show, completion: { (image) in
-                        if let image = image {
-                            self.posterImageView.image = image
-                        }
-                    })
-                }
-            }
         }
     }
 }

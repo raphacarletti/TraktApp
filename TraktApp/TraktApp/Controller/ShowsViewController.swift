@@ -29,7 +29,12 @@ class ShowsViewController: UIViewController {
         self.configNavBar()
         self.configPullToRefresh()
         self.getAllShows()
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showImageFinishDownload(_:)), name: .ShowImageFinishDownload, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .ShowImageFinishDownload, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +77,18 @@ class ShowsViewController: UIViewController {
         self.shows = []
         self.getAllShows {
             self.refresher.endRefreshing()
+        }
+    }
+    
+    @objc func showImageFinishDownload(_ notification: Notification) {
+        guard let userInfo = notification.userInfo, let tmdbId = userInfo[NotificationKeys.tmdbId] as? Int else {
+            return
+        }
+        
+        if let index = self.shows.index(where: { (show) -> Bool in
+            return tmdbId == show.tmdbId
+        }) {
+            self.showsCollectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
         }
     }
 
